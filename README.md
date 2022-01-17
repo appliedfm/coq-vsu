@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/appliedfm/coq-vsu)
 
-Tools for working with [verified software units](https://softwarefoundations.cis.upenn.edu/vc-current/VSU_intro.html).
+Tools for working with [Verified Software Units](https://softwarefoundations.cis.upenn.edu/vc-current/VSU_intro.html) in the [Coq](https://coq.inria.fr/) ecosystem.
 
 # Installing
 
