@@ -16,7 +16,7 @@ $ vsu --help
 ```console
 $ cd src
 /src$ dune build
-/src$ dune exec ./vsutool.exe -- --help
+/src$ dune exec ./vsu.exe -- --help
 ```
 
 #

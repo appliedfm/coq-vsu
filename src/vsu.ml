@@ -5,12 +5,12 @@ let driver (show_vsu_path: bool) (show_include_path: bool) =
   if show_include_path then Printf.printf "%s/%s/%s" opam_switch_prefix vsu_relative "include"
 
 let main () =
-  let vsutool_cmd =
+  let vsu_cmd =
     let open Arg in
     ( Cmdliner.Term.(
         const driver $ show_vsu_path $ show_include_path),
-      Cmdliner.Term.info "vsutool" ~version:vsutool_version ~doc:vsutool_doc ~man:vsutool_man )
-  in match Cmdliner.Term.eval ~catch:false vsutool_cmd with
+      Cmdliner.Term.info "vsu" ~version:vsu_version ~doc:vsu_doc ~man:vsu_man )
+  in match Cmdliner.Term.eval ~catch:false vsu_cmd with
   | `Error _ -> exit 1
   | `Version
   | `Help

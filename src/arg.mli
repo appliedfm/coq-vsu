@@ -1,10 +1,10 @@
 open Cmdliner
 
-val vsutool_version : string
+val vsu_version : string
 
-val vsutool_man : Cmdliner.Manpage.block list
+val vsu_man : Cmdliner.Manpage.block list
 
-val vsutool_doc : string
+val vsu_doc : string
 
 val show_vsu_path : bool Term.t
 

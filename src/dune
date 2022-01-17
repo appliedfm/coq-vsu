@@ -1,6 +1,6 @@
 (executable
- (name vsutool)
- (public_name vsutool)
+ (name vsu)
+ (public_name vsu)
  (package coq-vsu)
  (flags :standard -linkall -rectypes)
  (libraries base cmdliner stdio))
