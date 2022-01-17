@@ -1,18 +1,18 @@
 open Cmdliner
 
-let coqvsu_version = "0.0.1"
+let vsutool_version = "0.0.1"
 
-let coqvsu_man =
+let vsutool_man =
   [
     `S "DESCRIPTION";
     `P "Tools for working with Verified Software Units";
     `S "USAGE";
     `P "To print the C include path:";
-    `Pre "coqvsu --show-include-path";
+    `Pre "vsutool --show-include-path";
     `P "See https://github.com/appliedfm/coq-vsu for more information.";
   ]
 
-let coqvsu_doc = "coqvsu Verified Software Unit CLI"
+let vsutool_doc = "vsutool Verified Software Unit CLI"
 
 let show_vsu_path : bool Term.t =
   let doc = "Print the path to the VSU directory" in
