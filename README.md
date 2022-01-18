@@ -127,6 +127,14 @@ $ echo `vsu --show-tool-path=coq-compcert-32/clightgen`
 $
 ```
 
+## Example: show VSU package metadata path
+
+```console
+$ echo `vsu --show-meta-path`
+/home/tcarstens/.opam/coq-8.14/lib/coq-vsu/meta
+$
+```
+
 
 ## Installing
 

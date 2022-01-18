@@ -8,6 +8,8 @@ val vsu_doc : string
 
 val show_vsu_path : bool Term.t
 
+val show_meta_path : bool Term.t
+
 val show_include_path : bool Term.t
 
 val show_coq_variant_path : string option Term.t

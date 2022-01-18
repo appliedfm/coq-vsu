@@ -18,6 +18,10 @@ let show_vsu_path : bool Term.t =
   let doc = "Print the path to the VSU directory" in
   Arg.(value & flag & info [ "show-vsu-path" ] ~doc)
 
+let show_meta_path : bool Term.t =
+  let doc = "Print the path to the package meta directory" in
+  Arg.(value & flag & info [ "show-meta-path" ] ~doc)
+  
 let show_include_path : bool Term.t =
   let doc = "Print the C include path" in
   Arg.(value & flag & info [ "I"; "show-include-path" ] ~doc)
