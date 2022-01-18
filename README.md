@@ -74,15 +74,29 @@ $
 
 The `--show-coq-q-arg` flag prints arguments suitable for `coqc`, `coqtop`, etc. For packages which are installed to "default" locations, it silently prints nothing (allowing the default to simply work). For package variants, which are typically *not* installed to a "default" location, it prints the appropriate flag to set the variant path.
 
+### compcert
+
 ```console
 $ echo `vsu --show-coq-q-arg=coq-compcert`
 
 $ echo `vsu --show-coq-q-arg=coq-compcert-32`
 -Q /home/tcarstens/.opam/coq-8.14/lib/coq-variant/compcert32/compcert compcert
+$
+```
+
+### vst
+
+```console
 $ echo `vsu --show-coq-q-arg=coq-VST`
 
 $ echo `vsu --show-coq-q-arg=coq-VST-32`
 -Q /home/tcarstens/.opam/coq-8.14/lib/coq-variant/VST32/VST VST
+$
+```
+
+### certigraph
+
+```console
 $ echo `vsu --show-coq-q-arg=coq-certigraph`
 
 $ echo `vsu --show-coq-q-arg=coq-certigraph-32`
