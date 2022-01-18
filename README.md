@@ -77,9 +77,9 @@ The `--show-coq-q-arg` flag prints arguments suitable for `coqc`, `coqtop`, etc.
 ### compcert
 
 ```console
-$ echo `vsu --show-coq-q-arg=coq-compcert`
+$ echo `vsu -Q coq-compcert`
 
-$ echo `vsu --show-coq-q-arg=coq-compcert-32`
+$ echo `vsu -Q coq-compcert-32`
 -Q /home/tcarstens/.opam/coq-8.14/lib/coq-variant/compcert32/compcert compcert
 $
 ```
@@ -87,9 +87,9 @@ $
 ### vst
 
 ```console
-$ echo `vsu --show-coq-q-arg=coq-VST`
+$ echo `vsu -Q coq-vst`
 
-$ echo `vsu --show-coq-q-arg=coq-VST-32`
+$ echo `vsu -Q coq-vst-32`
 -Q /home/tcarstens/.opam/coq-8.14/lib/coq-variant/VST32/VST VST
 $
 ```
@@ -97,9 +97,9 @@ $
 ### certigraph
 
 ```console
-$ echo `vsu --show-coq-q-arg=coq-certigraph`
+$ echo `vsu -Q coq-certigraph`
 
-$ echo `vsu --show-coq-q-arg=coq-certigraph-32`
+$ echo `vsu -Q coq-certigraph-32`
 -Q /home/tcarstens/.opam/coq-8.14/lib/coq-variant/CertiGraph32/CertiGraph CertiGraph
 $
 ```
