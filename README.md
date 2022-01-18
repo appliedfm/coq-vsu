@@ -23,57 +23,61 @@ This unique project structure is not natively supported by `opam`. In particular
 For a simple example of `coq-vsu` in action, see [coq-vsu-int63](https://github.com/appliedfm/coq-vsu-int63).
 
 
-## Examples
-
-### C library paths
+## Example: C library paths
 
 The `vsu -I` command prints a path within the current `opam` switch that is suitable for installing VSU libraries.
 
 ```console
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu -I`
+$ echo `vsu -I`
 /home/tcarstens/.opam/coq-8.14/lib/coq-vsu/lib/include
-tcarstens@pop-os:~/formal_methods/coq-vsu$
+$
 ```
 
 One important feature of this design is that it is compatible with the `-I` flag found in `compcert`, `clang`, and `gcc`. For example, the following brings *all* VSU libraries into scope when compiling `main.c`:
 
     $(CC) -I`vsu -I` main.c
 
-### compcert & VST paths
+## Example: Coq library paths
+
+### compcert
 
 ```console
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-compcert`
+$ echo `vsu --show-coq-variant-path=coq-compcert`
 /home/tcarstens/.opam/coq-8.14/lib/coq/user-contrib/compcert
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-compcert-32`
+$ echo `vsu --show-coq-variant-path=coq-compcert-32`
 /home/tcarstens/.opam/coq-8.14/lib/coq-variant/compcert32/compcert
 ```
 
+### vst
+
 ```console
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-vst`
+$ echo `vsu --show-coq-variant-path=coq-vst`
 /home/tcarstens/.opam/coq-8.14/lib/coq/user-contrib/VST
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-vst-32`
+$ echo `vsu --show-coq-variant-path=coq-vst-32`
 /home/tcarstens/.opam/coq-8.14/lib/coq-variant/VST32/VST
-tcarstens@pop-os:~/formal_methods/coq-vsu$
+$
 ```
 
-### ccomp paths
+## Example: finding tools
+
+### compcert/ccomp
 
 ```console
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert/ccomp`
+$ echo `vsu --show-compcert-tool-path=coq-compcert/ccomp`
 /home/tcarstens/.opam/coq-8.14/bin/ccomp
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert-32/ccomp`
+$ echo `vsu --show-compcert-tool-path=coq-compcert-32/ccomp`
 /home/tcarstens/.opam/coq-8.14/variants/compcert32/bin/ccomp
-tcarstens@pop-os:~/formal_methods/coq-vsu$
+$
 ```
 
-### clightgen paths
+### compcert/clightgen
 
 ```console
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert/clightgen`
+$ echo `vsu --show-compcert-tool-path=coq-compcert/clightgen`
 /home/tcarstens/.opam/coq-8.14/bin/clightgen
-tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert-32/clightgen`
+$ echo `vsu --show-compcert-tool-path=coq-compcert-32/clightgen`
 /home/tcarstens/.opam/coq-8.14/variants/compcert32/bin/clightgen
-tcarstens@pop-os:~/formal_methods/coq-vsu$
+$
 ```
 
 
