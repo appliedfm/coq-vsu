@@ -139,7 +139,7 @@ $
 ## Installing
 
 ```console
-$ opam pin -n -y src
+$ opam pin -n -y .
 $ opam install coq-vsu
 $ vsu --help
 ```
