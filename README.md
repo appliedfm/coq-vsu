@@ -164,7 +164,7 @@ $ cd src
 #
 
 [![Coq](https://img.shields.io/badge/-Coq-royalblue)](https://github.com/coq/coq)
-[![compcert](https://img.shields.io/badge/-compcert-orangered)](https://compcert.org/)
-[![VST](https://img.shields.io/badge/-VST-navy)](https://vst.cs.princeton.edu/)
+[![compcert](https://img.shields.io/badge/-compcert-pink)](https://compcert.org/)
+[![VST](https://img.shields.io/badge/-VST-palevioletred)](https://vst.cs.princeton.edu/)
 
 [![applied.fm](https://img.shields.io/badge/-applied.fm-orchid)](https://applied.fm)
