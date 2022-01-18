@@ -23,19 +23,58 @@ This unique project structure is not natively supported by `opam`. In particular
 For a simple example of `coq-vsu` in action, see [coq-vsu-int63](https://github.com/appliedfm/coq-vsu-int63).
 
 
-## Example
+## Examples
+
+### C library paths
 
 The `vsu -I` command prints a path within the current `opam` switch that is suitable for installing VSU libraries.
 
 ```console
 tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu -I`
-/home/tcarstens/.opam/coq-8.14/lib/coq-vsu/include
+/home/tcarstens/.opam/coq-8.14/lib/coq-vsu/lib/include
 tcarstens@pop-os:~/formal_methods/coq-vsu$
 ```
 
 One important feature of this design is that it is compatible with the `-I` flag found in `compcert`, `clang`, and `gcc`. For example, the following brings *all* VSU libraries into scope when compiling `main.c`:
 
     $(CC) -I`vsu -I` main.c
+
+### compcert & VST paths
+
+```console
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-compcert`
+/home/tcarstens/.opam/coq-8.14/lib/coq/user-contrib/compcert
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-compcert-32`
+/home/tcarstens/.opam/coq-8.14/lib/coq-variant/compcert32/compcert
+```
+
+```console
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-vst`
+/home/tcarstens/.opam/coq-8.14/lib/coq/user-contrib/VST
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-coq-variant-path=coq-vst-32`
+/home/tcarstens/.opam/coq-8.14/lib/coq-variant/VST32/VST
+tcarstens@pop-os:~/formal_methods/coq-vsu$
+```
+
+### ccomp paths
+
+```console
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert/ccomp`
+/home/tcarstens/.opam/coq-8.14/bin/ccomp
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert-32/ccomp`
+/home/tcarstens/.opam/coq-8.14/variants/compcert32/bin/ccomp
+tcarstens@pop-os:~/formal_methods/coq-vsu$
+```
+
+### clightgen paths
+
+```console
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert/clightgen`
+/home/tcarstens/.opam/coq-8.14/bin/clightgen
+tcarstens@pop-os:~/formal_methods/coq-vsu$ echo `vsu --show-compcert-tool-path=coq-compcert-32/clightgen`
+/home/tcarstens/.opam/coq-8.14/variants/compcert32/bin/clightgen
+tcarstens@pop-os:~/formal_methods/coq-vsu$
+```
 
 
 ## Installing

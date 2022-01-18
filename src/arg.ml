@@ -21,3 +21,11 @@ let show_vsu_path : bool Term.t =
 let show_include_path : bool Term.t =
   let doc = "Print the C include path" in
   Arg.(value & flag & info [ "I"; "show-include-path" ] ~doc)
+
+let show_coq_variant_path : string option Term.t =
+  let doc = "Print the path to the specified Coq package variange" in
+  Arg.(value & opt (some string) None & info [ "show-coq-variant-path" ] ~docv:"PACKAGE" ~doc)
+
+let show_compcert_tool_path : string option Term.t =
+  let doc = "Print the path to the specified compcert tool" in
+  Arg.(value & opt (some string) None & info [ "show-compcert-tool-path" ] ~docv:"TOOL" ~doc)

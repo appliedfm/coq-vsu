@@ -9,3 +9,7 @@ val vsu_doc : string
 val show_vsu_path : bool Term.t
 
 val show_include_path : bool Term.t
+
+val show_coq_variant_path : string option Term.t
+
+val show_compcert_tool_path : string option Term.t
