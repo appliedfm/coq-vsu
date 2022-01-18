@@ -3,7 +3,7 @@ open Printf
 let do__show_vsu_path opam_switch_prefix vsu_relative =
   sprintf "%s/%s" opam_switch_prefix vsu_relative
 
-let do__show_vsu_path opam_switch_prefix vsu_relative =
+let do__show_meta_path opam_switch_prefix vsu_relative =
   sprintf "%s/%s" (do__show_vsu_path opam_switch_prefix vsu_relative) "meta"
   
 let do__show_include_path opam_switch_prefix vsu_relative =
@@ -47,7 +47,7 @@ let driver
   let opam_switch_prefix = Sys.getenv "OPAM_SWITCH_PREFIX" in
   let vsu_relative = "lib/coq-vsu" in
   if show_vsu_path then printf "%s" (do__show_vsu_path opam_switch_prefix vsu_relative);
-  if show_meta_path then printf "%s" (do__show_vsu_path opam_switch_prefix vsu_relative);
+  if show_meta_path then printf "%s" (do__show_meta_path opam_switch_prefix vsu_relative);
   if show_include_path then printf "%s" (do__show_include_path opam_switch_prefix vsu_relative);
   Option.iter (fun package -> printf "%s" (do__show_coq_variant_path opam_switch_prefix package)) show_coq_variant_path;
   Option.iter (fun package -> printf "%s" (do__show_tool_path opam_switch_prefix package)) show_tool_path;
