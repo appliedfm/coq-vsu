@@ -110,9 +110,9 @@ $
 ### compcert/ccomp
 
 ```console
-$ echo `vsu --show-compcert-tool-path=coq-compcert/ccomp`
+$ echo `vsu --show-tool-path=coq-compcert/ccomp`
 /home/tcarstens/.opam/coq-8.14/bin/ccomp
-$ echo `vsu --show-compcert-tool-path=coq-compcert-32/ccomp`
+$ echo `vsu --show-tool-path=coq-compcert-32/ccomp`
 /home/tcarstens/.opam/coq-8.14/variants/compcert32/bin/ccomp
 $
 ```
@@ -120,9 +120,9 @@ $
 ### compcert/clightgen
 
 ```console
-$ echo `vsu --show-compcert-tool-path=coq-compcert/clightgen`
+$ echo `vsu --show-tool-path=coq-compcert/clightgen`
 /home/tcarstens/.opam/coq-8.14/bin/clightgen
-$ echo `vsu --show-compcert-tool-path=coq-compcert-32/clightgen`
+$ echo `vsu --show-tool-path=coq-compcert-32/clightgen`
 /home/tcarstens/.opam/coq-8.14/variants/compcert32/bin/clightgen
 $
 ```

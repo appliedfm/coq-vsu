@@ -30,7 +30,7 @@ let show_coq_q_arg : string option Term.t =
   let doc = "Print the -Q argument to bring the given package into scope" in
   Arg.(value & opt (some string) None & info [ "Q"; "show-coq-q-arg" ] ~docv:"PACKAGE" ~doc)
   
-let show_compcert_tool_path : string option Term.t =
-  let doc = "Print the path to the specified compcert tool" in
-  Arg.(value & opt (some string) None & info [ "show-compcert-tool-path" ] ~docv:"TOOL" ~doc)
+let show_tool_path : string option Term.t =
+  let doc = "Print the path to the specified tool" in
+  Arg.(value & opt (some string) None & info [ "show-tool-path" ] ~docv:"PACKAGE/TOOL" ~doc)
 

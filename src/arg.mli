@@ -14,4 +14,4 @@ val show_coq_variant_path : string option Term.t
 
 val show_coq_q_arg : string option Term.t
 
-val show_compcert_tool_path : string option Term.t
+val show_tool_path : string option Term.t
