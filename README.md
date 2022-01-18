@@ -37,6 +37,7 @@ One important feature of this design is that it is compatible with the `-I` flag
 
     $(CC) -I`vsu -I` main.c
 
+
 ## Example: Coq library paths
 
 ### compcert
@@ -57,6 +58,17 @@ $ echo `vsu --show-coq-variant-path=coq-vst-32`
 /home/tcarstens/.opam/coq-8.14/lib/coq-variant/VST32/VST
 $
 ```
+
+### certigraph
+
+```console
+$ echo `vsu --show-coq-variant-path=coq-certigraph`
+/home/tcarstens/.opam/coq-8.14/lib/coq/user-contrib/CertiGraph
+$ echo `vsu --show-coq-variant-path=coq-certigraph-32`
+/home/tcarstens/.opam/coq-8.14/lib/coq-variant/CertiGraph32/CertiGraph
+$
+```
+
 
 ## Example: finding tools
 
