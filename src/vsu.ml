@@ -3,8 +3,8 @@ open Printf
 let do__show_vsu_path opam_switch_prefix vsu_relative =
   sprintf "%s/%s" opam_switch_prefix vsu_relative
 
-let do__show_meta_path opam_switch_prefix vsu_relative =
-  sprintf "%s/%s" (do__show_vsu_path opam_switch_prefix vsu_relative) "meta"
+let do__show_unit_metadata_path opam_switch_prefix vsu_relative =
+  sprintf "%s/%s" (do__show_vsu_path opam_switch_prefix vsu_relative) "unit-metadata"
   
 let do__show_include_path opam_switch_prefix vsu_relative =
   sprintf "%s/%s" (do__show_vsu_path opam_switch_prefix vsu_relative) "lib/include"
@@ -39,7 +39,7 @@ let do__show_tool_path opam_switch_prefix tool =
 
 let driver
     (show_vsu_path: bool)
-    (show_meta_path: bool)
+    (show_unit_metadata_path: bool)
     (show_include_path: bool)
     (show_coq_variant_path: string option)
     (show_coq_q_arg: string option)
@@ -47,7 +47,7 @@ let driver
   let opam_switch_prefix = Sys.getenv "OPAM_SWITCH_PREFIX" in
   let vsu_relative = "lib/coq-vsu" in
   if show_vsu_path then printf "%s" (do__show_vsu_path opam_switch_prefix vsu_relative);
-  if show_meta_path then printf "%s" (do__show_meta_path opam_switch_prefix vsu_relative);
+  if show_unit_metadata_path then printf "%s" (do__show_unit_metadata_path opam_switch_prefix vsu_relative);
   if show_include_path then printf "%s" (do__show_include_path opam_switch_prefix vsu_relative);
   Option.iter (fun package -> printf "%s" (do__show_coq_variant_path opam_switch_prefix package)) show_coq_variant_path;
   Option.iter (fun package -> printf "%s" (do__show_tool_path opam_switch_prefix package)) show_tool_path;
@@ -60,7 +60,7 @@ let main () =
     ( Cmdliner.Term.(
         const driver
         $ show_vsu_path
-        $ show_meta_path
+        $ show_unit_metadata_path
         $ show_include_path
         $ show_coq_variant_path
         $ show_coq_q_arg

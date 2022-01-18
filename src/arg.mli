@@ -8,7 +8,7 @@ val vsu_doc : string
 
 val show_vsu_path : bool Term.t
 
-val show_meta_path : bool Term.t
+val show_unit_metadata_path : bool Term.t
 
 val show_include_path : bool Term.t
 

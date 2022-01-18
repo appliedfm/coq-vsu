@@ -130,8 +130,8 @@ $
 ## Example: show VSU package metadata path
 
 ```console
-$ echo `vsu --show-meta-path`
-/home/tcarstens/.opam/coq-8.14/lib/coq-vsu/meta
+$ echo `vsu --show-unit-metadata-path`
+/home/tcarstens/.opam/coq-8.14/lib/coq-vsu/unit-metadata
 $
 ```
 
