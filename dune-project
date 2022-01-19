@@ -13,7 +13,9 @@
  (synopsis "Tools for working with Verified Software Units")
  (description "Tools for working with Verified Software Units")
  (depends
+  (atdgen (>= 2.2.1))
   (cmdliner (>= 1.0.4))
   (dune (> 1.5))
   (stdio (>= v0.14.0))
+  (yojson (>= 1.7.0))
 ))

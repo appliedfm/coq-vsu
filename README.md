@@ -158,9 +158,7 @@ $ opam unpin coq-vsu
 ## Building & running without installing
 
 ```console
-$ cd src
-/src$ dune build
-/src$ dune exec ./vsu.exe -- --help
+$ dune exec ./src/vsu.exe -- --help
 ```
 
 #

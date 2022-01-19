@@ -3,4 +3,16 @@
  (public_name vsu)
  (package coq-vsu)
  (flags :standard -linkall -rectypes)
- (libraries base cmdliner stdio))
+ (libraries atdgen base cmdliner stdio yojson))
+
+(rule
+ (targets unit_j.ml
+          unit_j.mli)
+ (deps    unit.atd)
+ (action  (run atdgen -j -j-std %{deps})))
+
+(rule
+ (targets unit_t.ml
+          unit_t.mli)
+ (deps    unit.atd)
+ (action  (run atdgen -t %{deps})))

@@ -1,0 +1,8 @@
+type tool = {
+    tool_path <json name="tool-path">: string;
+}
+
+type package = {
+    coq_library_path <json name="coq-library-path">: string;
+    tools: (string * tool) list <json repr="object">
+}
