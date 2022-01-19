@@ -1,5 +1,7 @@
 # coq-vsu
 
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fcoq-vsu.readthedocs.io)
+![Documentation Status](https://readthedocs.org/projects/coq-vsu/badge/?version=latest)
 ![GitHub](https://img.shields.io/github/license/appliedfm/coq-vsu)
 
 Tools for working with [Verified Software Units](https://softwarefoundations.cis.upenn.edu/vc-current/VSU_intro.html) in the [Coq](https://coq.inria.fr/) ecosystem.
@@ -166,5 +168,7 @@ $ cd src
 [![Coq](https://img.shields.io/badge/-Coq-royalblue)](https://github.com/coq/coq)
 [![compcert](https://img.shields.io/badge/-compcert-pink)](https://compcert.org/)
 [![VST](https://img.shields.io/badge/-VST-palevioletred)](https://vst.cs.princeton.edu/)
+[![Sphinx](https://img.shields.io/badge/-Sphinx-navy)](https://www.sphinx-doc.org)
+[![readthedocs](https://img.shields.io/badge/-readthedocs-slateblue)](https://readthedocs.org)
 
 [![applied.fm](https://img.shields.io/badge/-applied.fm-orchid)](https://applied.fm)
