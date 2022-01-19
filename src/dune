@@ -6,6 +6,12 @@
  (libraries atdgen base cmdliner stdio yojson))
 
 (rule
+ (targets constants.ml
+          constants.mli)
+ (deps    make_constants.sh)
+ (action  (run bash make_constants.sh)))
+
+(rule
  (targets unit_j.ml
           unit_j.mli)
  (deps    unit.atd)
